@@ -1,0 +1,157 @@
+body {
+    height:100vh;
+    background: purple;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    width: 390px;
+    height: 530px;
+    background: #A68D00	;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-right: 15px;
+    padding-bottom: 13px;
+    
+}
+.grid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 15% 10% 60% 15%;
+    grid-gap: 20px;
+    
+}
+
+.grid {
+    border: 2px solid #A68D00;
+    background-color: #FFE240;
+}
+
+.screen{
+    grid-column-start: 1;
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: 65px;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 15px;
+    border-radius: 10px;
+    border-bottom-right-radius: 3px;
+    border-color: black;
+}
+
+.screen{
+    background-color: white;
+    border-radius: 10px;
+    border-color: grey;
+    font-size: 2em;
+}
+
+.numbers {
+    width: 100%;
+    display:grid;
+    grid-gap: 10px;
+    grid-area: 3/ 1/ span 1/ span 1;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.opera--top {
+    margin-top: 15px;
+    margin-left: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.clicker-top {
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border-color: darkgray;
+    display: flex;
+    margin: 5px;
+}
+
+.opera--left {
+    grid-column-start:2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-start: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.clicker-left {
+    width: 44px;
+    height: 67px;
+    border-radius: 10px;
+    border-color: darkgray;
+}
+
+.opera--bottom {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 15px;
+
+}
+
+.clicker-bot{
+    height: 40px;
+    width: 75px;
+    border-radius: 10px;
+    border-color: darkgray;
+    margin: 5px;
+    
+    
+}
+
+.clicker {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    text-decoration: blink;
+}
+
+/*.clicker:hover {
+    cursor: crosshair;
+    background: #F00;
+    color: aliceblue;
+}*/
+
+button{
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 1em red;
+    font-size: 2em;
+}
+button:hover{
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 1em red;
+    color: white;
+    font-size: 2em;
+    cursor: crosshair;
+    background: #FFB000;
+}
