@@ -12,15 +12,12 @@ class Calculator{
     }
 
     delete(){
-        if(this.currOperand === 'Infinity') this.clear()
         this.currOperand = this.currOperand.slice(0, this.currOperand.length - 1)
     }
 
     appendNumber(number){
         if(number === '.' && this.currOperand.includes('.')) return
         if(number === '0' && this.currOperand[0] === '0') return
-        if(this.currOperand === 'Infinity' && this.currOperand === 'NaN')
-            this.clear()
         if(this.currOperand[0] === '0' && this.currOperand[1] !== '.' && number !== '.')
             this.currOperand = this.currOperand.slice(1, this.currOperand.length)
         this.currOperand = this.currOperand.toString() + number.toString()
@@ -61,6 +58,7 @@ class Calculator{
     }
 
     updateDisplay(){
+        if(this.currOperand === 'Infinity') this.clear()
         this.currOperandText.innerText = this.currOperand
         if(this.operation !== undefined){
             this.prevOperandText.innerText = this.prevOperand + ' ' + this.operation.toString()
