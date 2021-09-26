@@ -18,6 +18,8 @@ class Calculator{
     appendNumber(number){
         if(number === '.' && this.currOperand.includes('.')) return
         if(number === '0' && this.currOperand[0] === '0') return
+        if(this.currOperand === 'Infinity' && this.currOperand === 'NaN')
+            this.currOperand = ''
         if(this.currOperand[0] === '0' && this.currOperand[1] !== '.' && number !== '.')
             this.currOperand = this.currOperand.slice(1, this.currOperand.length)
         this.currOperand = this.currOperand.toString() + number.toString()
