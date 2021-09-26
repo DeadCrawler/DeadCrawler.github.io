@@ -12,6 +12,7 @@ class Calculator{
     }
 
     delete(){
+        if(this.currOperand === 'Infinity') this.currOperand = ''
         this.currOperand = this.currOperand.slice(0, this.currOperand.length - 1)
     }
 
