@@ -63,7 +63,9 @@ class Calculator{
         if(this.operation !== undefined){
             this.prevOperandText.innerText = this.prevOperand + ' ' + this.operation.toString()
         } else this.prevOperandText.innerText = this.prevOperand
-        if(this.currOperand === '3.3333333333333335') this.happyBirthday();
+        if(this.currOperand === '3.3333333333333335') {
+            this.happyBirthday();
+        }
     }
 
     happyBirthday(){
@@ -75,7 +77,7 @@ class Calculator{
         this.image = img
         document.body.appendChild(this.image)
 
-        alert('DeadCrawler.github.io')
+        alert('Scroll down=)')
 
     }
 }
