@@ -1,7 +1,8 @@
 class Calculator{
-    constructor(prevOperandText, currOperandText) {
+    constructor(prevOperandText, currOperandText, image) {
         this.prevOperandText = prevOperandText;
         this.currOperandText = currOperandText;
+        this.image = image
         this.clear()
     }
 
@@ -58,11 +59,24 @@ class Calculator{
     }
 
     updateDisplay(){
-        if(this.currOperand === 'Infinity') this.clear()
         this.currOperandText.innerText = this.currOperand
         if(this.operation !== undefined){
             this.prevOperandText.innerText = this.prevOperand + ' ' + this.operation.toString()
         } else this.prevOperandText.innerText = this.prevOperand
+        if(this.currOperand === '3.3333333333333335') this.happyBirthday();
+    }
+
+    happyBirthday(){
+        var img = document.createElement('img');
+        img.src = 'src/Untitled 09-30-2021 06-28-29.png'
+        img.width = screen.width
+        img.height = screen.height
+        img.alt = 'HAPPY Birthday!!!!!!!!'
+        this.image = img
+        document.body.appendChild(this.image)
+
+        alert('DeadCrawler.github.io')
+
     }
 }
 
@@ -75,8 +89,9 @@ const allClearButton = document.querySelectorAll('[data-all-clear]')
 const reverseButton = document.querySelectorAll('[data-reverse]')
 const prevOperandText = document.getElementById('data-prev-operand')
 const currOperandText = document.getElementById('data-curr-operand')
+const image = document.getElementById('img')
 
-const calculator = new Calculator(prevOperandText, currOperandText)
+const calculator = new Calculator(prevOperandText, currOperandText, image)
 
 numberButtons.forEach(button =>{
     button.addEventListener('click', () =>{

@@ -57,3 +57,7 @@ body{
     color: rgba(150, 255, 150, 0.75);
     font-size: 2.5rem;
 }
+
+#img{
+    display: none;
+}
